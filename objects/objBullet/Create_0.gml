@@ -1,0 +1,3 @@
+/// @description
+
+bulletSpeed = 15;

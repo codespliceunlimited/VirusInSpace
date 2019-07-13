@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "566fe01d-aa56-41f4-ae0d-5c13b994e1cd",
+            "Value": {
+                "id": "74984bf1-f3ca-40a3-8373-2a34b04213ed",
+                "resourcePath": "objects\\objBullet\\objBullet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5674b01e-efad-465e-abb4-3e739a09f9ba",
             "Value": {
                 "id": "c2b512c1-dc20-4870-83e1-cacf296e0c28",
@@ -348,14 +356,6 @@
                 "id": "f79cb07c-e051-4f6e-bbc3-6d94449e6ed7",
                 "resourcePath": "scripts\/ease_in_circ\/ease_in_circ.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "65d77265-5b2e-4a9d-a7ba-5f172b96b943",
-            "Value": {
-                "id": "0ad4b460-246c-4a1b-b1f5-46630981aea5",
-                "resourcePath": "sprites\/sprite5\/sprite5.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -411,6 +411,14 @@
             "Value": {
                 "id": "b822ee29-f917-45c2-9a07-7686650809db",
                 "resourcePath": "sprites\/spr_hero_running_0\/spr_hero_running_0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "792fb73c-314d-4653-9695-a4c6bb03546f",
+            "Value": {
+                "id": "6229a8dc-30ce-4a45-a29f-6bf83e3c4c25",
+                "resourcePath": "sprites\\sprBullet\\sprBullet.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -595,6 +603,14 @@
             "Value": {
                 "id": "838bed0a-3fc0-4a8a-8e2b-ed166c343211",
                 "resourcePath": "sprites\/sprFlashlight\/sprFlashlight.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "af43652c-bafe-4ae2-a2a6-336da8fb23f4",
+            "Value": {
+                "id": "6a09b6e9-2e7f-4568-80d0-42522d3f995d",
+                "resourcePath": "sprites\\sprPlayer\\sprPlayer.yy",
                 "resourceType": "GMSprite"
             }
         },

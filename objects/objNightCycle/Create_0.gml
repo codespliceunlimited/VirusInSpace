@@ -1,5 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description
+
 night_alpha = 0.2;
 length_day = 5;
 length_night = 8;

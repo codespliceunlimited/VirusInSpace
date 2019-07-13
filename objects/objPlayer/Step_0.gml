@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
-var seconds_passed = delta_time/1000000;
+
+
+#region Movement
+
+seconds_passed = delta_time/1000000;
 var move_speed_this_frame = move_speed*seconds_passed;
 
 var move_xinput = 0;
@@ -19,4 +23,13 @@ var moving = ( point_distance(0,0,move_xinput,move_yinput) > 0 );
 if moving  {
     var move_dir = point_direction(0,0,move_xinput,move_yinput);
     Movement(move_speed_this_frame,  move_dir);
+}
+
+#endregion
+// Shooting
+if mouse_check_button_pressed(mb_left){
+	var slug = instance_create_layer(x,y,"Bullets",objBullet);	
+	
+	var directions = point_direction(x,y,mouse_x,mouse_y);
+	slug.dir = directions;
 }
