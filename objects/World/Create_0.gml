@@ -32,3 +32,5 @@ newsTimeOut = 300;
 
 InitItems();
 
+// Money
+cash = 0;
