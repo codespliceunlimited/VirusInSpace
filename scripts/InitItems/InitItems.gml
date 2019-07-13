@@ -1,4 +1,4 @@
-enum loot{
+enum lootCat{
 	weapon,
 	suit,
 	attachment,
@@ -18,40 +18,38 @@ enum iteminfo {
 	description
 }
 
-enum weapons {
+enum Loot {
 	pistol,
 	autoRifle,
 	shotgun,
 	boltAction,
-	
-}
-
-
-
-var c = loot.weapon;
-setupItem(weapons.pistol, "Hand Gun", c, objWeapon,sprPistol,8,		"Pistol Packen Papa");
-setupItem(weapons.autoRifle, "Ar-15", c, objWeapon,sprRifle,20,		"Is this thing legal?");
-setupItem(weapons.shotgun, "Shotgun", c, objWeapon,sprShotgun,10,	"2 words, Cha Chink");
-setupItem(weapons.boltAction, "Rifle",c, objWeapon,sprRifle,10,		"Am I a sniper now?");
-
-enum ammo{
-	bullets	
-}
-
-var c = loot.ammo
-setupItem(ammo.bullets, "Ammo Pack",c, objAmmo, sprAmmo, -1, "As valuable as gold",50);
-
-
-enum suits {
+	bullets,
 	chest,
 	legs,
 	gloves,
-	boots
+	boots,
+	cash
 }
-var c = loot.suit;
-setupItem(suits.chest, "Body Armor", c, objSuit,sprChest,-1,"Pro-tech" );
-setupItem(suits.legs, "Pants", c, objSuit, sprPants, -1, "Good old brown pants");
-setupItem(suits.gloves, "Gloves", c, objSuit, sprGloves, -1, "Big Gloves...");
 
 
-setupItem(cash, "Money", c, objMoney, sprMoney, -1, "Cold Hard Cash");
+
+var c = lootCat.weapon;
+setupItem(Loot.pistol, "Hand Gun", c, objWeapon,sprPistol,8,		"Pistol Packen Papa");
+setupItem(Loot.autoRifle, "Ar-15", c, objWeapon,sprRifle,20,		"Is this thing legal?");
+setupItem(Loot.shotgun, "Shotgun", c, objWeapon,sprShotgun,10,	"2 words, Cha Chink");
+setupItem(Loot.boltAction, "Rifle",c, objWeapon,sprRifle,10,		"Am I a sniper now?");
+
+
+
+var c = lootCat.ammo
+setupItem(Loot.bullets, "Ammo Pack",c, objAmmo, sprAmmo, -1, "As valuable as gold",50);
+
+
+
+var c = lootCat.suit;
+setupItem(Loot.chest, "Body Armor", c, objSuit,sprChest,-1,"Pro-tech" );
+setupItem(Loot.legs, "Pants", c, objSuit, sprPants, -1, "Good old brown pants");
+setupItem(Loot.gloves, "Gloves", c, objSuit, sprGloves, -1, "Big Gloves...");
+
+var c = lootCat.money;
+setupItem(Loot.cash, "Money", c, objMoney, sprMoney, -1, "Cold Hard Cash");
