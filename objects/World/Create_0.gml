@@ -30,7 +30,8 @@ startfeedy = 1000;
 newsTimeOut = 300;
 
 
-InitItems();
-
 // Money
 cash = 0;
+
+InitItems();
+
