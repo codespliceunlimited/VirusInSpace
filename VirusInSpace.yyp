@@ -138,7 +138,7 @@
             "Key": "12634a25-64cb-4d21-a60f-75ed77d34248",
             "Value": {
                 "id": "35ad8ad5-f609-42e4-8c44-0eeeefaee8f3",
-                "resourcePath": "objects\\objPlayer\\objPlayer.yy",
+                "resourcePath": "objects\/objPlayer\/objPlayer.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -282,7 +282,7 @@
             "Key": "490ea98e-90de-4ec6-9bcd-c708c99d8d9c",
             "Value": {
                 "id": "c7585614-05b8-46c7-9e40-e998c7f185e9",
-                "resourcePath": "objects\\objLoot\\objLoot.yy",
+                "resourcePath": "objects\/objLoot\/objLoot.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -370,7 +370,7 @@
             "Key": "65d77265-5b2e-4a9d-a7ba-5f172b96b943",
             "Value": {
                 "id": "0ad4b460-246c-4a1b-b1f5-46630981aea5",
-                "resourcePath": "sprites\\sprite5\\sprite5.yy",
+                "resourcePath": "sprites\/sprite5\/sprite5.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -610,7 +610,7 @@
             "Key": "ca9e8b19-27a1-45fe-86e9-f15d5aaa7321",
             "Value": {
                 "id": "401b0fd9-d687-439f-b16e-a22907df35e9",
-                "resourcePath": "views\\ca9e8b19-27a1-45fe-86e9-f15d5aaa7321.yy",
+                "resourcePath": "views\/ca9e8b19-27a1-45fe-86e9-f15d5aaa7321.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -682,7 +682,7 @@
             "Key": "d3e5e248-ba90-4795-bf1c-fba494afc9dd",
             "Value": {
                 "id": "dde8e836-db7c-49d6-bd26-8b010eafb717",
-                "resourcePath": "views\\d3e5e248-ba90-4795-bf1c-fba494afc9dd.yy",
+                "resourcePath": "views\/d3e5e248-ba90-4795-bf1c-fba494afc9dd.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -826,7 +826,7 @@
             "Key": "f18626df-9fde-4ae6-a55e-209da7438551",
             "Value": {
                 "id": "a84b81a5-4ac0-4e36-a7d7-d75baa141050",
-                "resourcePath": "scripts\\InitItems\\InitItems.yy",
+                "resourcePath": "scripts\/InitItems\/InitItems.yy",
                 "resourceType": "GMScript"
             }
         },
