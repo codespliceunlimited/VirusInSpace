@@ -11,4 +11,3 @@ if mouse_x < x {
 }
 
 draw_sprite_ext(ITEMINFO[myGun,iteminfo.sprite],0,x,y,1,flip,dir,c_white,1);
-draw_surface_ext()
