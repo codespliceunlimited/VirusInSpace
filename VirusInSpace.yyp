@@ -151,6 +151,14 @@
             }
         },
         {
+            "Key": "207af106-0a23-4f7b-a593-feb54d75bd84",
+            "Value": {
+                "id": "8ef46482-80fb-4734-9340-534543c32a8d",
+                "resourcePath": "sprites\/BuildingMask\/BuildingMask.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "21ec620a-5a9e-473c-9b3b-be2a4162ffe6",
             "Value": {
                 "id": "40252495-d458-4daa-899d-a70feb1c54e8",
@@ -228,14 +236,6 @@
                 "id": "a8490970-58aa-44b4-ae1c-da4f483e9cbd",
                 "resourcePath": "scripts\/Wave\/Wave.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "3bc00a99-8865-40ed-a40a-ef0234ebe54b",
-            "Value": {
-                "id": "655fdcd0-756e-412d-a1fd-4350336367de",
-                "resourcePath": "sprites\\BuildingMask\\BuildingMask.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -498,7 +498,7 @@
             "Key": "920f0170-4578-4dec-baaf-a9a1a9fc0867",
             "Value": {
                 "id": "34b68ca3-1809-44ab-943a-2196567d1b60",
-                "resourcePath": "objects\\objBzorgorbs\\objBzorgorbs.yy",
+                "resourcePath": "objects\/objBzorgorbs\/objBzorgorbs.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -594,7 +594,7 @@
             "Key": "ae56c366-ce65-4543-bd5d-65f9d2c548b0",
             "Value": {
                 "id": "838bed0a-3fc0-4a8a-8e2b-ed166c343211",
-                "resourcePath": "sprites\\sprFlashlight\\sprFlashlight.yy",
+                "resourcePath": "sprites\/sprFlashlight\/sprFlashlight.yy",
                 "resourceType": "GMSprite"
             }
         },
