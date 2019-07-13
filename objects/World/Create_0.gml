@@ -6,7 +6,7 @@
 
 
 
-globalvar BlueColor, DarkerRed,pingColor,YellowColor,GreyColor, newsFeed
+globalvar BlueColor, DarkerRed,pingColor,YellowColor,GreyColor, newsFeed, ITEMINFO
 ;
 
 
@@ -30,5 +30,5 @@ startfeedy = 1000;
 newsTimeOut = 300;
 
 
-
+InitItems();
 
