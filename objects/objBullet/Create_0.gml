@@ -1,3 +1,3 @@
 /// @description
-
-bulletSpeed = 15;
+maxBulletSpeed = 15
+bulletSpeed = maxBulletSpeed;

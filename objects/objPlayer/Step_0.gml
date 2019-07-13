@@ -28,8 +28,16 @@ if moving  {
 #endregion
 // Shooting
 if mouse_check_button_pressed(mb_left){
-	var slug = instance_create_layer(x,y,"Bullets",objBullet);	
 	
-	var directions = point_direction(x,y,mouse_x,mouse_y);
-	slug.dir = directions;
+	gunFlow = ITEMINFO[myGun,iteminfo.fireRate];
+	
+}
+
+// Timers
+if gunFlow > 0 {
+	gunFlow --;
+		var slug = instance_create_layer(x,y,"Bullets",objBullet);	
+		var directions = point_direction(x,y,mouse_x,mouse_y);
+		directions = directions + random_range(-1,1);
+		slug.dir = directions;	
 }

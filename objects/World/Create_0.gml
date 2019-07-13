@@ -2,7 +2,7 @@
 // You can write your code in this editor
 // world Details
 
-
+screenWidthPosition = room_width / 32;
 
 
 

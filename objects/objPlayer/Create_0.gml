@@ -8,4 +8,6 @@ movement_inputs[2] = ord("A");
 movement_inputs[3] = ord("S");
 
 
-myGun = Loot.shotgun;
+myGun = Loot.autoRifle;
+
+gunFlow =0;
