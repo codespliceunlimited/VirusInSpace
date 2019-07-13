@@ -1,6 +1,6 @@
 
 {
-    "name": "room0",
+    "name": "GameWorld",
     "id": "50b5e0eb-b160-4064-9a19-7869aae171ad",
     "creationCodeFile": "",
     "inheritCode": false,

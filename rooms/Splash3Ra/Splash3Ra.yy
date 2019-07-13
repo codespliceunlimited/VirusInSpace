@@ -1,6 +1,6 @@
 
 {
-    "name": "SplashShenani1",
+    "name": "Splash3Ra",
     "id": "c35af641-ed8a-4b9f-b3a7-a09a6f624972",
     "creationCodeFile": "",
     "inheritCode": false,

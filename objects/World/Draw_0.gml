@@ -4,3 +4,4 @@
 
 
 
+draw_clear_alpha()
