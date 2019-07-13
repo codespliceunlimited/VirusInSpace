@@ -16,7 +16,7 @@ ITEMINFO[i, iteminfo.capacity]	= argument[5];
 ITEMINFO[i, iteminfo.description]	= argument[6];  
 ITEMINFO[i, iteminfo.stackmax]	= -1;
 
-if argument_count > 6 {
+if argument_count > 7 {
 	ITEMINFO[i, iteminfo.stackmax] = argument[7];
 }else{
 		
