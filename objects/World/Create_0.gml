@@ -35,3 +35,5 @@ cash = 0;
 
 InitItems();
 
+scr_sn_init();
+

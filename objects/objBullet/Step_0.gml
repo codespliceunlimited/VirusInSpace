@@ -1,7 +1,24 @@
 /// @description 
+damage = bulletSpeed*dmg;
+
+badie = collision_point(x,y,objBzorgorbs,false,true);
+if badie{
+	with (badie){
+		myHealth -= other.damage;	
+	}
+	bulletSpeed -= 2;
+	if bulletSpeed <= 0 bulletSpeed = 0;
+}
 
 
 
+
+
+
+
+
+
+#region movement
 var spd = bulletSpeed;
 
 
@@ -33,3 +50,4 @@ if bulletSpeed < maxBulletSpeed{
 	if bulletSpeed > 0 bulletSpeed -= 0.2;
 	if bulletSpeed <= 0 bulletSpeed = 0;
 }
+#endregion

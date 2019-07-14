@@ -40,4 +40,26 @@ if gunFlow > 0 {
 		var directions = point_direction(x,y,mouse_x,mouse_y);
 		directions = directions + random_range(-1,1);
 		slug.dir = directions;	
+		slug.dmg = ITEMINFO[myGun,iteminfo.damage];
 }
+
+
+#region Camera
+
+	xTo = (x + mouse_x)/2;
+	yTo = (y + mouse_y)/2;
+	
+
+
+//update object position 
+//xTo += (xTo - x) / 100000;
+//yTo += (yTo - y) / 80000;
+
+//dont let camera go outside of the room
+xTo = clamp(xTo,view_W_half, room_width+view_W_half);
+yTo = clamp(yTo,view_H_half, room_height+view_H_half);
+
+
+//update camera view
+camera_set_view_pos(camera,	(lerp(camera_get_view_x(camera), xTo-view_W_half,0.2)),(lerp(camera_get_view_y(camera), yTo-view_H_half,0.2)));
+#endregion
