@@ -879,6 +879,14 @@
             }
         },
         {
+            "Key": "d9f30841-55e7-499d-938d-0aa17c9aee4a",
+            "Value": {
+                "id": "5b4c50c5-44be-4085-be6c-9f607f7e082e",
+                "resourcePath": "sprites\\BuildingRoofless\\BuildingRoofless.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "db0add6f-f0fc-422d-9a0f-08e3eaf7f3b5",
             "Value": {
                 "id": "d768e671-bd5b-4355-9a20-cf16894b87c3",
@@ -1099,7 +1107,17 @@
         "06e16797-a392-4473-a44a-029065e5a245",
         "f18626df-9fde-4ae6-a55e-209da7438551",
         "ae43fe31-c7a1-416b-bad4-4688c668b622",
-        "d0904106-e10d-4e1e-9da8-58a1ba37b0f5"
+        "d0904106-e10d-4e1e-9da8-58a1ba37b0f5",
+        "bf798357-9201-496c-8332-891a70682c75",
+        "3fa2eb9c-cf80-40b6-83de-c989ee52fd9a",
+        "cfecc8ef-f436-48f2-91ed-d048a508c19a",
+        "85fdcb76-c7d5-425d-9763-4ca00c9fb835",
+        "30a22ebf-dd53-4317-bf67-78162888f935",
+        "c7c2059c-193d-4e2c-ab4a-959715f537c3",
+        "bd3f7caa-a869-4561-9d26-eddecaa349a5",
+        "62f91a85-0675-4981-8c1a-594448f71ab4",
+        "9915e7d7-2ca0-4a5b-b9ae-87faeb4c5dbb",
+        "f1616aec-9be9-4163-99cf-446cf4d02d1d"
     ],
     "tutorial": ""
 }
