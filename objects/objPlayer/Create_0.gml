@@ -8,11 +8,16 @@ movement_inputs[2] = ord("A");
 movement_inputs[3] = ord("S");
 
 
-myGun = Loot.boltAction;
+myGun = Loot.pistol;
 
 gunFlow =0;
 
 
+timer = 0;
+
+spawnerList = ds_list_create();
+
+radius = 400;
 
 
 #region Camera

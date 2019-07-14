@@ -1,10 +1,26 @@
 /// @description 
+
+lifeSpan --;
+
+if lifeSpan <= 0 {
+	instance_destroy();	
+}
+
+
+if bulletSpeed <= 0  exit;
+
+if x<-100 or y < -100 or x > room_width+100 or y > room_height+100{
+	instance_destroy();	
+}
+
 damage = bulletSpeed*dmg;
 
 badie = collision_point(x,y,objBzorgorbs,false,true);
 if badie{
 	with (badie){
-		myHealth -= other.damage;	
+		myHealth -= other.damage;
+		var text = instance_create_layer(x+irandom_range(-20,20),y-50,"Bullets",o_damagetext);
+		text.mytext = round(other.damage);
 	}
 	bulletSpeed -= 2;
 	if bulletSpeed <= 0 bulletSpeed = 0;
