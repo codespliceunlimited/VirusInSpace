@@ -5,7 +5,7 @@ move_speed = 300;
 
 
 
-myGun = Loot.shotgun;
+myGun = Loot.autoRifle;
 
 
 movement_inputs[0] = 0;
