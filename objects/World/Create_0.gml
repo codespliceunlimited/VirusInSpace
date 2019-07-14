@@ -2,7 +2,7 @@
 // You can write your code in this editor
 // world Details
 
-
+screenWidthPosition = room_width / 32;
 
 
 
@@ -34,4 +34,6 @@ newsTimeOut = 300;
 cash = 0;
 
 InitItems();
+
+scr_sn_init();
 
