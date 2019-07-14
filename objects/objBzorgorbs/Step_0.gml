@@ -45,6 +45,9 @@ if state = states.chase{
 	}else{
 		state = states.wander;	
 	}
+	if distance_to_object(food) > radius*2{
+		state = states.wander;	
+	}
 }
 
 
