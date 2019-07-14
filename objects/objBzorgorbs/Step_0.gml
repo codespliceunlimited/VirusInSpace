@@ -15,9 +15,9 @@ var move_yinput = 0;
 if state = states.wander{
 	if ds_list_size(checkPointList) > 0{
 		target = ds_list_find_value(checkPointList,checkpoint);	
-		
+
 		if distance_to_object(target) < 1{
-			if ds_list_size(checkPointList) > checkpoint {
+			if ds_list_size(checkPointList) > checkpoint+1 {
 				checkpoint++;	
 			}
 		}
