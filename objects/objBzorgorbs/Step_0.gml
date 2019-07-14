@@ -13,7 +13,19 @@ var move_xinput = 0;
 var move_yinput = 0;
 
 if state = states.wander{
-	
+	if ds_list_size(checkPointList) > 0{
+		target = ds_list_find_value(checkPointList,checkpoint);	
+		
+		if distance_to_object(target) < 1{
+			if ds_list_size(checkPointList) > checkpoint {
+				checkpoint++;	
+			}
+		}
+		
+		this_angle = point_direction(x,y,target.x,target.y);
+		move_xinput += lengthdir_x(1, this_angle);
+	    move_yinput += lengthdir_y(1, this_angle);
+	}
 	
 	food = collision_circle(x,y,radius,objFood,false,true);
 	if food {

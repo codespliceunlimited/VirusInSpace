@@ -36,10 +36,20 @@ if mouse_check_button_pressed(mb_left){
 // Timers
 if timer % 10 = 0 {
 	spawner = collision_circle_list(x,y,radius*2,objSpawner,false,true,spawnerList,false);
-	for (var i=0; i< spawner; i++){
-		thisSpawner = spawnerList[|i];
-		thisSpawner.active = true;
+	if spawner > 0{
+		for (var i=0; i< spawner; i++){
+			thisSpawner = spawnerList[|i];
+			thisSpawner.active = true;
+		}
+		ds_list_clear(spawnerList);
 	}
+	
+	check = collision_circle(x,y,radius*2,objCheckpoint,false,true);
+	if check{
+		 if ds_list_find_index(checkPointList,check) < 0{
+			ds_list_add(checkPointList, check);
+		 }
+	 }
 }
 if gunFlow > 0 {
 	gunFlow --;
