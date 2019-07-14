@@ -17,13 +17,16 @@ damage = bulletSpeed*dmg;
 
 badie = collision_point(x,y,objBzorgorbs,false,true);
 if badie{
-	with (badie){
-		myHealth -= other.damage;
-		var text = instance_create_layer(x+irandom_range(-20,20),y-50,"Bullets",o_damagetext);
-		text.mytext = round(other.damage);
+	if badie != target{
+		with (badie){
+			myHealth -= other.damage;
+			var text = instance_create_layer(x+irandom_range(-20,20),y-50,"Bullets",o_damagetext);
+			text.mytext = round(other.damage);
+		}
+		bulletSpeed -= 2;
+		if bulletSpeed <= 0 bulletSpeed = 0;
 	}
-	bulletSpeed -= 2;
-	if bulletSpeed <= 0 bulletSpeed = 0;
+	target = badie;
 }
 
 
