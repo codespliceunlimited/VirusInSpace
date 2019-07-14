@@ -9,32 +9,29 @@ if myHealth <= 0 {
 
 #region Moveing 
 
+var move_xinput = 0;
+var move_yinput = 0;
+
 if state = states.wander{
-	change --;
-	if change <= 0 {
-		change = irandom_range(5,60);
-		movement_inputs[irandom(3)] = irandom(1);
-
-	}else if change mod 5 = 0{
-		xoff+= random(0.02)
-		image_index = wrap(scr_sn_noise(0,image_number*3,1,1,1,(xoff)),0,image_number-1);
+	
+	
+	food = collision_circle(x,y,radius,objFood,false,true);
+	if food {
+		state = states.chase;
 	}
-	
-	
-	
-	var seconds_passed = delta_time/1000000;
-	var move_speed_this_frame = move_speed*seconds_passed;
+}
+#endregion
 
-	var move_xinput = 0;
-	var move_yinput = 0;
- 
-	for ( var i = 0; i < array_length_1d(movement_inputs); i++){
-	    var this_key = movement_inputs[i];
-	    if keyboard_check(this_key) {
-	        var this_angle = i*90;
-	        move_xinput += lengthdir_x(1, this_angle);
-	        move_yinput += lengthdir_y(1, this_angle);
-	    }
+
+if state = states.chase{
+	if instance_exists(food){
+		food = instance_nearest(x,y,objFood);
+		
+		this_angle = point_direction(x,y,food.x,food.y);
+		move_xinput += lengthdir_x(1, this_angle);
+	    move_yinput += lengthdir_y(1, this_angle);
+	}else{
+		state = states.wander;	
 	}
 }
 
@@ -42,8 +39,32 @@ if state = states.wander{
 
 var moving = ( point_distance(0,0,move_xinput,move_yinput) > 0 );
 if moving  {
+	var move_speed_this_frame = move_speed*seconds_passed;
 	var move_dir = point_direction(0,0,move_xinput,move_yinput);
-	Movement(move_speed_this_frame,  move_dir);
+	var spd = move_speed_this_frame;
+	var dir = move_dir;
+
+	var xtarg = clamp(x+lengthdir_x(spd,dir),0,room_width);
+	var ytarg = clamp(y+lengthdir_y(spd,dir),0,room_height);
+
+	if place_free(xtarg,ytarg) {
+	    x = xtarg;
+	    y = ytarg;
+	}else {
+	    var sweep_interval = 40;
+    
+	    for ( var angle = sweep_interval; angle <= 80; angle += sweep_interval) {
+	        for ( var multiplier = -1; multiplier <= 1; multiplier += 2) {      
+	            var angle_to_check = dir+angle*multiplier;
+	            xtarg = x+lengthdir_x(spd, angle_to_check);
+	            ytarg = y+lengthdir_y(spd, angle_to_check);     
+	            if place_free(xtarg,ytarg) {
+	                x = xtarg;
+	                y = ytarg;  
+	                exit;       
+	            }   
+	        }
+	    }
+	}
 }
 
-#endregion

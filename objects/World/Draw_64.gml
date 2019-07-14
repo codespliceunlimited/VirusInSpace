@@ -37,5 +37,6 @@ if newsTimeOut < 0 {
 draw_set_color(c_green);
 draw_set_alpha(0.6);
 draw_text(10,10,fps_real);
+draw_text(10,50,instance_number(objBzorgorbs));
 
 #endregion

@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+timer ++;
 
 #region Movement
 
@@ -34,6 +34,13 @@ if mouse_check_button_pressed(mb_left){
 }
 
 // Timers
+if timer % 10 = 0 {
+	spawner = collision_circle_list(x,y,radius*2,objSpawner,false,true,spawnerList,false);
+	for (var i=0; i< spawner; i++){
+		thisSpawner = spawnerList[|i];
+		thisSpawner.active = true;
+	}
+}
 if gunFlow > 0 {
 	gunFlow --;
 		var slug = instance_create_layer(x,y,"Bullets",objBullet);	

@@ -5,14 +5,14 @@
 var spd = argument0;
 var dir = argument1;
 
-var xtarg = x+lengthdir_x(spd,dir);
-var ytarg = y+lengthdir_y(spd,dir);
+var xtarg = clamp(x+lengthdir_x(spd,dir),0,room_width);
+var ytarg = clamp(y+lengthdir_y(spd,dir),0,room_height);
 
 if place_free(xtarg,ytarg) {
     x = xtarg;
     y = ytarg;
 }else {
-    var sweep_interval = 10;
+    var sweep_interval = 20;
     
     for ( var angle = sweep_interval; angle <= 80; angle += sweep_interval) {
         for ( var multiplier = -1; multiplier <= 1; multiplier += 2) {      

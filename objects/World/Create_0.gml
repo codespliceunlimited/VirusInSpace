@@ -3,10 +3,12 @@
 // world Details
 
 screenWidthPosition = room_width / 32;
+screenH = room_height/32;
 
 
 
-globalvar BlueColor, DarkerRed,pingColor,YellowColor,GreyColor, newsFeed, ITEMINFO
+globalvar BlueColor, DarkerRed,pingColor,YellowColor,GreyColor, newsFeed, ITEMINFO, enemyTotal, seconds_passed,
+checkPointList
 ;
 
 
@@ -19,6 +21,7 @@ GreyColor = make_color_rgb(166,186,199);
 
 // Data Structures
 newsFeed = ds_list_create();
+checkPointList =  ds_list_create();
 
 
 
@@ -33,7 +36,18 @@ newsTimeOut = 300;
 // Money
 cash = 0;
 
-InitItems();
 
+// init 
+InitItems();
 scr_sn_init();
 
+//enemy
+
+enemyTotal = 200;
+
+enum states {
+	wander,
+	chase,
+	run,
+	comeBack
+}

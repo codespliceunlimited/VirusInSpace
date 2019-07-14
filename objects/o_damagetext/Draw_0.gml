@@ -4,7 +4,7 @@
 x += tween(x,xtarg,.1);
 y += tween(y,ytarg,.1);
 
-font_set(fnt_large,fa_center,fa_middle);
+font_set(fnt_small,fa_center,fa_middle);
 draw_text_transformed_colour(
     x,y,
     string_hash_to_newline(mytext),scale*scalemod,scale*scalemod,angle,
