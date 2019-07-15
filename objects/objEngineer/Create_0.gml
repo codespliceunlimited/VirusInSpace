@@ -3,7 +3,7 @@
 move_speed = 550;
 
 
-
+image_speed = 0;
 
 myGun = Loot.autoRifle;
 
