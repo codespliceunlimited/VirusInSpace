@@ -29,7 +29,9 @@ if state = states.wander{
 	
 	food = collision_circle(x,y,radius,objFood,false,true);
 	if food {
-		state = states.chase;
+		if !collision_line(x,y,food.x,food.y,objBuilding,false,true){
+			state = states.chase;
+		}
 	}
 }
 #endregion
