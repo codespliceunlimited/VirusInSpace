@@ -75,6 +75,7 @@ if myHealth <= 0 {
 	var checknumber = ds_list_find_index(checkPointList,checkpoint);
 	newYou.checkpoint = checknumber;
 	audio_play_sound(sndTransform,4,false);
+	audio_play_sound(sndPlayerDie,4,false);
 	instance_destroy();
 
 	
