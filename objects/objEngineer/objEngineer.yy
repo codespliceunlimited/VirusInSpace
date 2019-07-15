@@ -37,7 +37,7 @@
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "f9bbdd09-6f47-44e2-a117-8003199185f9",
+    "parentObjectId": "7b18e165-cbc8-4b5e-9d89-2cdcdbf44324",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

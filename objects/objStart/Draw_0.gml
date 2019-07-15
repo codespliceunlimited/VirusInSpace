@@ -10,9 +10,7 @@ case Lobby:
 @"Save as many friendlys as possible!
 
 WASD to move
-Click to shoot
-
->>PRESS ANY KEY TO START<<");
+Click to shoot");
 	draw_set_halign(fa_left);
     break;
 }

@@ -7,4 +7,5 @@ if blocking exit;
 if moved > 0{
 x+=1;
 moved --;
+moveBack ++;
 }
