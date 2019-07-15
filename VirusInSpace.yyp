@@ -567,6 +567,14 @@
             }
         },
         {
+            "Key": "7e58f3f4-5981-4e2f-bbda-7670a4b67168",
+            "Value": {
+                "id": "09b61cb4-dd2f-4989-9dc6-02d3cc12e713",
+                "resourcePath": "sounds\\sndPlayerDie\\sndPlayerDie.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "803384c2-2202-4dc3-b41b-9420ae53e427",
             "Value": {
                 "id": "99b293b8-2a2d-4cb0-b8d7-d40c03be4190",
