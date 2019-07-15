@@ -139,6 +139,6 @@ if myHealth <= 0 {
 	var checkpoint = instance_nearest(x,y,objCheckpoint);
 	var checknumber = ds_list_find_index(checkPointList,checkpoint);
 	newYou.checkpoint = checknumber;
-	
+	audio_play_sound(sndTransform,4,false);
 }
 #endregion
