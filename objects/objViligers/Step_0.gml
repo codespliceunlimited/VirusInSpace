@@ -7,6 +7,15 @@ if myHealth <= 0 {
 }
 #endregion
 
+/// @description Insert description here
+// You can write your code in this editor
+#region Dying
+if myHealth <= 0 {
+	instance_destroy();
+	
+}
+#endregion
+
 #region Moveing 
 
 var move_xinput = 0;
@@ -37,17 +46,37 @@ if state = states.wander{
 	        move_yinput += lengthdir_y(1, this_angle);
 	    }
 	}
+
+	if distance_to_object(objPlayer) > (radius){
+		state = states.comeBack;
+	}
 	danger = collision_circle(x,y,radius,objBzorgorbs,false,true);
 	if danger {
 		state = states.run;
 	}
 }
 #endregion
+if state= states.comeBack{
+		this_angle = point_direction(x,y,objPlayer.x,objPlayer.y);
+		move_xinput += lengthdir_x(1, this_angle);
+	    move_yinput += lengthdir_y(1, this_angle);
+		
+		danger = collision_circle(x,y,radius,objBzorgorbs,false,true);
+		if danger {
+			state = states.run;
+		}
+
+		if distance_to_object(objPlayer) < (radius+50){
+			state = states.wander;
+		}
+}
 
 if state= states.run{
 		if instance_exists(danger){
 			danger = instance_nearest(x,y,objBzorgorbs);
-		
+		if distance_to_object(danger) > radius-100{
+			state=states.wander;	
+		}
 		this_angle = point_direction(danger.x,danger.y,x,y);
 		move_xinput += lengthdir_x(1, this_angle);
 	    move_yinput += lengthdir_y(1, this_angle);
@@ -59,9 +88,13 @@ if state= states.run{
 if state = states.chase{
 		if instance_exists(target){
 		if distance_to_object(target) > 1{
-			this_angle = point_direction(x,y,food.x,food.y);
+			this_angle = point_direction(x,y,target.x,target.y);
 			move_xinput += lengthdir_x(1, this_angle);
 		    move_yinput += lengthdir_y(1, this_angle);
+		}
+		danger = collision_circle(x,y,radius,objBzorgorbs,false,true);
+		if danger {
+			state = states.run;
 		}
 	}else{
 		state = states.wander;	
