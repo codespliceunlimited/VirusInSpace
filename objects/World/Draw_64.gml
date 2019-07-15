@@ -15,7 +15,8 @@ if finished {
 	Points = 0;
 	var number = ds_list_size(scoreboardList)
 	Points = (number*550)+(50000-totalTime)
-	draw_text(view_W_half,view_H_half, Points);
+	var strings = string(Points)+" Points";
+	draw_text(view_W_half,view_H_half*2, strings);
 }
 
 
