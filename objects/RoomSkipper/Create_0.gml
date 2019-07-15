@@ -1,2 +1,2 @@
 /// @description Insert description here
-alarm[0] = 200;
+alarm[0] = 500;

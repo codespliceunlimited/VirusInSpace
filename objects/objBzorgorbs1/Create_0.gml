@@ -24,4 +24,4 @@ myHealth = 100;
 biteTimer = 0;
 
 
-state = states.check;
+state = states.wander;

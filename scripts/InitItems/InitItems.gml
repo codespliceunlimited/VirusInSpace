@@ -37,10 +37,10 @@ enum Loot {
 
 
 var c = lootCat.weapon;
-setupItem(Loot.pistol,		"Hand Gun", c, objWeapon,sprPistol,	8,		"Pistol Packen Papa",	1, 0.5,	1);
+setupItem(Loot.pistol,		"Hand Gun", c, objWeapon,sprPistol,	8,		"Pistol Packen Papa",	1, 0.8,	1);
 setupItem(Loot.autoRifle,	"Ar-15",	c, objWeapon,sprRifle,	20,		"Is this thing legal?",	3, 1,	1);
-setupItem(Loot.shotgun,		"Shotgun",	c, objWeapon,sprShotgun,12,		"2 words, Cha Chink",	5, 0.8,	1);
-setupItem(Loot.boltAction,	"Rifle",	c, objWeapon,sprRifle,	10,		"Am I a sniper now?",	1, 1.5,	2);
+setupItem(Loot.shotgun,		"Shotgun",	c, objWeapon,sprShotgun,12,		"2 words, Cha Chink",	3, 0.5,	1);
+setupItem(Loot.boltAction,	"Rifle",	c, objWeapon,sprBolt,	10,		"Am I a sniper now?",	1, 1.5,	2);
 
 
 /*
