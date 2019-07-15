@@ -50,7 +50,8 @@ enum states {
 	chase,
 	run,
 	comeBack,
-	bite
+	bite,
+	check
 }
 
 Dead = false;

@@ -143,6 +143,14 @@
             }
         },
         {
+            "Key": "1a3797da-bd8a-40a7-b5bf-d4a1ad09e77a",
+            "Value": {
+                "id": "2f643f4c-6c8a-4851-8dbc-8ab7f5cfc48f",
+                "resourcePath": "objects\\objBzorgorbs1\\objBzorgorbs1.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1ab0b98c-43a5-4c98-a21a-2c5e85dc0cd9",
             "Value": {
                 "id": "262df1ba-37e5-4606-87b6-191812a12eaf",
@@ -583,6 +591,14 @@
             }
         },
         {
+            "Key": "7feb1350-140d-4da3-b4ad-2c4c23778e60",
+            "Value": {
+                "id": "c7956452-e5a8-4ffd-83f4-055b9c32f84b",
+                "resourcePath": "objects\\objShotgun\\objShotgun.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "7e58f3f4-5981-4e2f-bbda-7670a4b67168",
             "Value": {
                 "id": "09b61cb4-dd2f-4989-9dc6-02d3cc12e713",
@@ -767,6 +783,22 @@
             }
         },
         {
+            "Key": "9de6ac7f-9a7a-449c-879a-fe00bd388b85",
+            "Value": {
+                "id": "82bcd8b1-5f16-49e9-94dc-11ce08184bd1",
+                "resourcePath": "objects\\objPickup\\objPickup.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a0f2dad6-9253-49d1-82a4-702e7e1f0fa7",
+            "Value": {
+                "id": "cda5c9f7-b44e-42db-bd91-295703df5081",
+                "resourcePath": "objects\\objBolt\\objBolt.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a128950b-5063-4876-b4a6-b99dbd2ea6d1",
             "Value": {
                 "id": "2d49065b-847b-40e0-b5a4-dc630fd4c1f1",
@@ -924,6 +956,14 @@
                 "id": "6ec71757-1170-4e0b-b51a-17128c423d04",
                 "resourcePath": "sprites\\PathEnd\\PathEnd.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ba68b316-b971-441e-9762-8612df535f0f",
+            "Value": {
+                "id": "12661222-86b8-47d6-adab-0091fddb3c18",
+                "resourcePath": "objects\\objAR\\objAR.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1196,6 +1236,14 @@
                 "id": "55fd98dc-25b1-4ae7-9a9f-c3444d95b743",
                 "resourcePath": "objects\/TowerThing\/TowerThing.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "df891278-93dc-4696-8d3f-8ba59fc234bd",
+            "Value": {
+                "id": "6a856c7b-e3fe-42e0-b4f2-71059f96af52",
+                "resourcePath": "sprites\\sprBolt\\sprBolt.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

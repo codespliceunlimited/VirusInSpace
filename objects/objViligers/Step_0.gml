@@ -17,8 +17,8 @@ if state = states.wander{
 		movement_inputs[irandom(3)] = irandom(1);
 
 	}else if change mod 5 = 0{
-		xoff+= random(0.02)
-		image_index = wrap(scr_sn_noise(0,image_number*3,1,1,1,(xoff)),0,image_number-1);
+		//xoff+= random(0.02)
+		//image_index = wrap(scr_sn_noise(0,image_number*3,1,1,1,(xoff)),0,image_number-1);
 	}
  
 	for ( var i = 0; i < array_length_1d(movement_inputs); i++){

@@ -1,2 +1,4 @@
 /// @description Insert description here
-room_goto_next();	
+if room_get_name(room) != "Lobby"{
+	room_goto_next();	
+}

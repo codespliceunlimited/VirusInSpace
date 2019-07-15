@@ -4,7 +4,13 @@ timer ++;
 
 image_index = ((-0.06*myHealth)+6);
 
-
+if keyboard_check_pressed(ord("E")){
+	var gun = collision_circle(x,y,radius/4,objPickup,false,true);
+	if gun {
+		myGun = gun.type;
+		instance_destroy(gun);
+	}
+}
 
 #region Movement
 
@@ -39,6 +45,11 @@ if mouse_check_button_pressed(mb_left){
 
 // Timers
 if timer % 10 = 0 {
+	var gun = collision_circle(x,y,radius/4,objPickup,false,true);
+	if gun{
+		var E = instance_create_layer(gun.x,gun.y,"Interactions",o_damagetext);
+		E.mytext = "E";
+	}
 	spawner = collision_circle_list(x,y,radius*2,objSpawner,false,true,spawnerList,false);
 	if spawner > 0{
 		for (var i=0; i< spawner; i++){
@@ -59,7 +70,11 @@ if gunFlow > 0 {
 	gunFlow --;
 		var slug = instance_create_layer(x,y,"Bullets",objBullet);	
 		var directions = point_direction(x,y,mouse_x,mouse_y);
-		directions = directions + random_range(-1,1);
+		if myGun = Loot.shotgun{
+			directions = directions + random_range(-10,10);
+		}else{
+			directions = directions + random_range(-1,1);
+		}
 		slug.dir = directions;	
 		slug.dmg = ITEMINFO[myGun,iteminfo.damage];
 		slug.bulletSpeed = (15 *ITEMINFO[myGun,iteminfo.spdMod]);

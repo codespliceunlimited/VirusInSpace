@@ -9,3 +9,7 @@ for (var i=0; i<=width+1; i++){
 		instance_create_layer(i*(sprite_width+15),j*(sprite_height+25),"Instances",TowerThing);
 	}
 }
+globalvar seconds_passed,checkPointList ;
+
+seconds_passed = delta_time/1000000;
+checkPointList = ds_list_create();
