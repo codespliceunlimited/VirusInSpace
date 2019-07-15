@@ -20,6 +20,8 @@ ITEMINFO[i, iteminfo.description]	= argument[6];
 ITEMINFO[i, iteminfo.fireRate]	= argument[7];
 ITEMINFO[i, iteminfo.damage]	= argument[8];
 ITEMINFO[i, iteminfo.spdMod]	= argument[9];
+ITEMINFO[i, iteminfo.sndShot]	= argument[10];
+ITEMINFO[i, iteminfo.sndReload]	= argument[11];
 
 
 
