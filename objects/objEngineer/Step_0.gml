@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+image_index = ((-0.06*myHealth)+6);
 
 #region Moveing 
 

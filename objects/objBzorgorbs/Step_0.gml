@@ -51,7 +51,7 @@ if state = states.chase{
 	    move_yinput += lengthdir_y(1, this_angle);
 		}else{
 			state = states.bite;
-			biteTimer = 30;
+			biteTimer = 90;
 			with (food) {
 				myHealth -= 10;
 			}
