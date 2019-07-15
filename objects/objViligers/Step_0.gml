@@ -36,7 +36,9 @@ if state = states.wander{
 	}
 	danger = collision_circle(x,y,radius,objBzorgorbs,false,true);
 	if danger {
-		state = states.run;
+		if collision_line(x,y,danger.x,danger.y,objBuilding,false,true) = noone{
+			state = states.run;
+		}
 	}
 }
 #endregion
@@ -49,7 +51,9 @@ if state= states.comeBack{
 	}
 		danger = collision_circle(x,y,radius,objBzorgorbs,false,true);
 		if danger {
-			state = states.run;
+			if collision_line(x,y,danger.x,danger.y,objBuilding,false,true) = noone{
+				state = states.run;
+			}
 		}
 		if instance_exists(objPlayer){
 			if distance_to_object(objPlayer) < (radius/3){
@@ -84,7 +88,9 @@ if state = states.chase{
 		}
 		danger = collision_circle(x,y,radius,objBzorgorbs,false,true);
 		if danger {
-			state = states.run;
+			if collision_line(x,y,danger.x,danger.y,objBuilding,false,true) = noone{
+				state = states.run;
+			}
 		}
 	}else{
 		state = states.wander;	
