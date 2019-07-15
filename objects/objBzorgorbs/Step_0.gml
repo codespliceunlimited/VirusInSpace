@@ -82,6 +82,8 @@ if state = states.chase{
 		}else{
 			state = states.bite;
 			biteTimer = 90;
+			biteint = 30;
+			bitestart = 0;
 			with (food) {
 				myHealth -= 10;
 			}
@@ -97,6 +99,12 @@ if state = states.chase{
 
 if state = states.bite {
 	biteTimer --;
+	bitestart ++;
+	if bitestart >= biteint {
+		bite = choose(sndBite1,sndBite2,sndBite3,sndBite4,sndBite5,sndBite6,sndBite7,sndBite8,sndBite9,sndBite10,sndBite11,sndBite12,sndBite13,sndBite14,sndBite15,sndBite16,sndBite17,sndBite18)
+		audio_play_sound(bite,4,false);
+		bitestart = 0;
+	}
 	if biteTimer <= 0 {
 		state = states.wander;	
 	}
