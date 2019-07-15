@@ -8,6 +8,8 @@ if keyboard_check_pressed(ord("E")){
 	var gun = collision_circle(x,y,radius/4,objPickup,false,true);
 	if gun {
 		myGun = gun.type;
+		var sndReload = ITEMINFO[myGun,iteminfo.sndReload]
+		audio_play_sound(sndReload,3,false);
 		instance_destroy(gun);
 	}
 }
@@ -38,7 +40,8 @@ if moving  {
 #endregion
 // Shooting
 if mouse_check_button_pressed(mb_left){
-	
+	var sndShots = ITEMINFO[myGun,iteminfo.sndShot]
+	audio_play_sound(sndShots,3,false);
 	gunFlow = ITEMINFO[myGun,iteminfo.fireRate];
 	
 }
