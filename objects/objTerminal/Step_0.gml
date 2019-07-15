@@ -8,11 +8,11 @@ if collision_circle(x,y,sprite_height,objEngineer,false,true){
 }
 
 if cost <= 0 {
-var door = instance_nearest(x,y,objWallN);
-	door.blocking = false;
-	
-var door = instance_nearest(x,y,objWallS);
-door.blocking = false;
+	with objWall {
+		if distance_to_object(other) < 800{
+			blocking = false;	
+		}
+	}
 
 	instance_destroy();	
 }
