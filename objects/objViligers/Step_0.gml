@@ -26,7 +26,7 @@ if state = states.wander{
 	    }
 	}
 	if instance_exists(objPlayer){
-		if distance_to_object(objPlayer) > (radius){
+		if distance_to_object(objPlayer) > (radius/2){
 			state = states.comeBack;
 		}
 	}
@@ -48,7 +48,7 @@ if state= states.comeBack{
 			state = states.run;
 		}
 		if instance_exists(objPlayer){
-			if distance_to_object(objPlayer) < (radius+50){
+			if distance_to_object(objPlayer) < (radius/3){
 				state = states.wander;
 			}
 		}
