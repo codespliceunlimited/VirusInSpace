@@ -8,9 +8,12 @@ if collision_circle(x,y,sprite_height,objEngineer,false,true){
 }
 
 if cost <= 0 {
-	with objWall {
-		if distance_to_object(other) < 800{
-			blocking = false;	
+	var anotherOne = collision_circle(x,y,200,objTerminal,false,true)
+	if anotherOne = noone{
+		with objWall {
+			if distance_to_object(other) < 800{
+				blocking = false;	
+			}
 		}
 	}
 

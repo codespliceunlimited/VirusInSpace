@@ -3,5 +3,6 @@
 blocking = true;
 
 moved = sprite_width;
+moveBack = 0;
 image_index = 1;
 image_speed = 0;

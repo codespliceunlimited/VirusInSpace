@@ -8,7 +8,7 @@ screenH = room_height/32;
 
 
 globalvar BlueColor, DarkerRed,pingColor,YellowColor,GreyColor, newsFeed, ITEMINFO, enemyTotal, seconds_passed,
-checkPointList, Dead
+checkPointList, Dead, finished, Points, cash,totalTime, scoreboardList
 ;
 
 
@@ -24,7 +24,7 @@ newsFeed = ds_list_create();
 checkPointList =  ds_list_create();
 
 
-
+finished = false;
 
 				//Init Variables 
 //NewsFeed
@@ -35,6 +35,7 @@ newsTimeOut = 300;
 
 // Money
 cash = 0;
+Points = 0;
 
 
 // init 

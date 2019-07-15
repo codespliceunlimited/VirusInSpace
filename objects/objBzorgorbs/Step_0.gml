@@ -74,7 +74,11 @@ if state = states.chase{
 	if instance_exists(food){
 		move_speed = 600;
 		if distance_to_object(food) > 1{
-		food = instance_nearest(x,y,objFood);
+			newFood = instance_nearest(x,y,objFood);
+			if collision_line(x,y,newFood.x,newFood.y,objBuilding,false,true) = noone{
+				food = newFood;
+			}
+				
 		
 		this_angle = point_direction(x,y,food.x,food.y);
 		move_xinput += lengthdir_x(1, this_angle);

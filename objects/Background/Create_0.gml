@@ -4,11 +4,7 @@ image_speed = 0;
 
 width = room_width/sprite_width;
 height = room_height/sprite_height;
-for (var i=0; i<=width+1; i++){
-	for (var j=0; j < height+2; j++){
-		instance_create_layer(i*(sprite_width+15),j*(sprite_height+25),"Instances",TowerThing);
-	}
-}
+
 globalvar seconds_passed,checkPointList ;
 
 seconds_passed = delta_time/1000000;
