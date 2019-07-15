@@ -53,7 +53,7 @@ if state = states.chase{
 			state = states.bite;
 			biteTimer = 30;
 			with (food) {
-				myHealth -= 20;
+				myHealth -= 10;
 			}
 		}
 	}else{

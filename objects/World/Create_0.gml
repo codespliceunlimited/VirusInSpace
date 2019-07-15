@@ -8,7 +8,7 @@ screenH = room_height/32;
 
 
 globalvar BlueColor, DarkerRed,pingColor,YellowColor,GreyColor, newsFeed, ITEMINFO, enemyTotal, seconds_passed,
-checkPointList
+checkPointList, Dead
 ;
 
 
@@ -52,6 +52,8 @@ enum states {
 	comeBack,
 	bite
 }
+
+Dead = false;
 
 #region Camera
 camera = view_camera[0];

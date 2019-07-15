@@ -10,7 +10,7 @@ movement_inputs[2] = ord("A");
 movement_inputs[3] = ord("S");
 
 
-myGun = Loot.autoRifle;
+myGun = Loot.pistol;
 gunFlow =0;
 
 myHealth = 100;
@@ -19,6 +19,7 @@ timer = 0;
 
 spawnerList = ds_list_create();
 
+image_speed = 0;
 
 radius = 400;
 

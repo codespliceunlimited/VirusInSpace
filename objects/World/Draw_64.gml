@@ -6,7 +6,10 @@
 
 
 
-
+if Dead {
+	draw_sprite(sprDeath,0,view_W_half,view_H_half);
+	
+}
 
 
 
