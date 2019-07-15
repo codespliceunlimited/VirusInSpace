@@ -1,11 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-#region Dying
-if myHealth <= 0 {
-	instance_destroy();
-	
-}
-#endregion
+
 
 #region Moveing 
 
@@ -22,12 +17,6 @@ if state = states.wander{
 		xoff+= random(0.02)
 		image_index = wrap(scr_sn_noise(0,image_number*3,1,1,1,(xoff)),0,image_number-1);
 	}
-	
-	
-	
-
-	
-
  
 	for ( var i = 0; i < array_length_1d(movement_inputs); i++){
 	    var this_key = movement_inputs[i];
@@ -42,20 +31,24 @@ if state = states.wander{
 		state = states.chase;
 		target = terminal;
 	}
-	if distance_to_object(objPlayer) > (radius){
-		state = states.comeBack;
+	if instance_exists(objPlayer){
+		if distance_to_object(objPlayer) > (radius/2){
+			state = states.comeBack;
+		}
 	}
 	danger = collision_circle(x,y,radius,objBzorgorbs,false,true);
 	if danger {
 		state = states.run;
 	}
 }
-#endregion
+
 if state= states.comeBack{
+	if instance_exists(objPlayer){
 		this_angle = point_direction(x,y,objPlayer.x,objPlayer.y);
 		move_xinput += lengthdir_x(1, this_angle);
 	    move_yinput += lengthdir_y(1, this_angle);
-		
+	}
+	
 		danger = collision_circle(x,y,radius,objBzorgorbs,false,true);
 		if danger {
 			state = states.run;
@@ -66,9 +59,10 @@ if state= states.comeBack{
 			state = states.chase;
 			target = terminal;
 		}
-
-		if distance_to_object(objPlayer) < (radius+50){
-			state = states.wander;
+		if instance_exists(objPlayer){
+			if distance_to_object(objPlayer) < (radius/3){
+				state = states.wander;
+			}
 		}
 }
 
@@ -134,4 +128,15 @@ if moving  {
 	    }
 	}
 }
+#endregion
 
+#region Dying
+if myHealth <= 0 {
+	instance_destroy();
+	var newYou = instance_create_layer(x,y,"Instances",objBzorgorbs);
+	var checkpoint = instance_nearest(x,y,objCheckpoint);
+	var checknumber = ds_list_find_index(checkPointList,checkpoint);
+	newYou.checkpoint = checknumber;
+	
+}
+#endregion

@@ -29,7 +29,7 @@ if state = states.wander{
 	
 	food = collision_circle(x,y,radius,objFood,false,true);
 	if food {
-		if !collision_line(x,y,food.x,food.y,objBuilding,false,true){
+		if collision_line(x,y,food.x,food.y,objBuilding,false,true) = noone{
 			state = states.chase;
 		}
 	}
@@ -39,15 +39,30 @@ if state = states.wander{
 
 if state = states.chase{
 	if instance_exists(food){
+		if distance_to_object(food) > 1{
 		food = instance_nearest(x,y,objFood);
 		
 		this_angle = point_direction(x,y,food.x,food.y);
 		move_xinput += lengthdir_x(1, this_angle);
 	    move_yinput += lengthdir_y(1, this_angle);
+		}else{
+			state = states.bite;
+			biteTimer = 30;
+			with (food) {
+				myHealth -= 20;
+			}
+		}
 	}else{
 		state = states.wander;	
 	}
 	if distance_to_object(food) > radius*2{
+		state = states.wander;	
+	}
+}
+
+if state = states.bite {
+	biteTimer --;
+	if biteTimer <= 0 {
 		state = states.wander;	
 	}
 }

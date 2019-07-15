@@ -1,22 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-#region Dying
-if myHealth <= 0 {
-	instance_destroy();
-	
-}
-#endregion
 
-/// @description Insert description here
-// You can write your code in this editor
-#region Dying
-if myHealth <= 0 {
-	instance_destroy();
-	
-}
-#endregion
-
-#region Moveing 
+#region wander
 
 var move_xinput = 0;
 var move_yinput = 0;
@@ -31,12 +16,6 @@ if state = states.wander{
 		xoff+= random(0.02)
 		image_index = wrap(scr_sn_noise(0,image_number*3,1,1,1,(xoff)),0,image_number-1);
 	}
-	
-	
-	
-
-	
-
  
 	for ( var i = 0; i < array_length_1d(movement_inputs); i++){
 	    var this_key = movement_inputs[i];
@@ -46,9 +25,10 @@ if state = states.wander{
 	        move_yinput += lengthdir_y(1, this_angle);
 	    }
 	}
-
-	if distance_to_object(objPlayer) > (radius){
-		state = states.comeBack;
+	if instance_exists(objPlayer){
+		if distance_to_object(objPlayer) > (radius){
+			state = states.comeBack;
+		}
 	}
 	danger = collision_circle(x,y,radius,objBzorgorbs,false,true);
 	if danger {
@@ -56,21 +36,25 @@ if state = states.wander{
 	}
 }
 #endregion
+#region  ComeBack
 if state= states.comeBack{
+	if instance_exists(objPlayer){
 		this_angle = point_direction(x,y,objPlayer.x,objPlayer.y);
 		move_xinput += lengthdir_x(1, this_angle);
 	    move_yinput += lengthdir_y(1, this_angle);
-		
+	}
 		danger = collision_circle(x,y,radius,objBzorgorbs,false,true);
 		if danger {
 			state = states.run;
 		}
-
-		if distance_to_object(objPlayer) < (radius+50){
-			state = states.wander;
+		if instance_exists(objPlayer){
+			if distance_to_object(objPlayer) < (radius+50){
+				state = states.wander;
+			}
 		}
 }
-
+#endregion
+#region  Run
 if state= states.run{
 		if instance_exists(danger){
 			danger = instance_nearest(x,y,objBzorgorbs);
@@ -85,6 +69,8 @@ if state= states.run{
 	}
 }
 
+#endregion
+#region Chase
 if state = states.chase{
 		if instance_exists(target){
 		if distance_to_object(target) > 1{
@@ -101,8 +87,8 @@ if state = states.chase{
 	}	
 }
 
-
-
+#endregion
+#region Move
 var moving = ( point_distance(0,0,move_xinput,move_yinput) > 0 );
 if moving  {
 	var move_speed_this_frame = move_speed*seconds_passed;
@@ -134,3 +120,15 @@ if moving  {
 	}
 }
 
+#endregion
+
+#region Dying
+if myHealth <= 0 {
+	instance_destroy();
+	var newYou = instance_create_layer(x,y,"Instances",objBzorgorbs);
+	var checkpoint = instance_nearest(x,y,objCheckpoint);
+	var checknumber = ds_list_find_index(checkPointList,checkpoint);
+	newYou.checkpoint = checknumber;
+	
+}
+#endregion
