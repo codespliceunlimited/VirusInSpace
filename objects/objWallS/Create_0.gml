@@ -4,4 +4,4 @@ blocking = true;
 
 moved = sprite_height;
 image_speed = 0;
-image_index = 0;
+image_index = 1;
