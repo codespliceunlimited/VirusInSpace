@@ -13,12 +13,14 @@ var move_xinput = 0;
 var move_yinput = 0;
 
 if state = states.wander{
+	move_speed = 400;
 	if ds_list_size(checkPointList) > 0{
 		target = ds_list_find_value(checkPointList,checkpoint);	
-
-		if distance_to_object(target) < 1{
-			if ds_list_size(checkPointList) > checkpoint+1 {
-				checkpoint++;	
+		if instance_exists(target){
+			if distance_to_object(target) < 1{
+				if ds_list_size(checkPointList) > checkpoint+1 {
+					checkpoint++;	
+				}
 			}
 		}
 		
@@ -39,6 +41,7 @@ if state = states.wander{
 
 if state = states.chase{
 	if instance_exists(food){
+		move_speed = 600;
 		if distance_to_object(food) > 1{
 		food = instance_nearest(x,y,objFood);
 		
@@ -53,7 +56,8 @@ if state = states.chase{
 			}
 		}
 	}else{
-		state = states.wander;	
+		state = states.wander;
+		
 	}
 	if distance_to_object(food) > radius*2{
 		state = states.wander;	
