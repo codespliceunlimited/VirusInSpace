@@ -615,6 +615,14 @@
             }
         },
         {
+            "Key": "7b18e165-cbc8-4b5e-9d89-2cdcdbf44324",
+            "Value": {
+                "id": "adc8ac8e-6cf3-4272-a90b-f9eb402cf4c6",
+                "resourcePath": "objects\\objGoodGuys\\objGoodGuys.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "7cd3641f-5551-4eb3-b099-0ff6e191e283",
             "Value": {
                 "id": "9b926537-af83-4fcc-86e4-a9dd67f1706f",
@@ -1279,6 +1287,14 @@
             }
         },
         {
+            "Key": "d943ab6a-e9fb-47ef-9f82-3480824ef9c1",
+            "Value": {
+                "id": "0fea3149-7d30-4a78-8d16-a39a008eb127",
+                "resourcePath": "objects\\objBite\\objBite.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d96f0912-9d1c-41a6-a1f9-4bba7791b695",
             "Value": {
                 "id": "e000f2d0-35d3-4fd1-8ee1-ab979e6a21ce",
@@ -1340,14 +1356,6 @@
                 "id": "6bf69f40-dda4-4a08-bb8c-781eadb75358",
                 "resourcePath": "scripts\/ease_inout_back\/ease_inout_back.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "df81a8b5-1a08-4a1f-b767-44d9750286a7",
-            "Value": {
-                "id": "55fd98dc-25b1-4ae7-9a9f-c3444d95b743",
-                "resourcePath": "objects\/TowerThing\/TowerThing.yy",
-                "resourceType": "GMObject"
             }
         },
         {
