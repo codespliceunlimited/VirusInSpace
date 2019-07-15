@@ -60,15 +60,22 @@ if state= states.comeBack{
 		if danger {
 			state = states.run;
 		}
+		
+		terminal = collision_circle(x,y,radius,objTerminal,false,true);
+		if terminal {
+			state = states.chase;
+			target = terminal;
+		}
 
 		if distance_to_object(objPlayer) < (radius+50){
 			state = states.wander;
 		}
 }
+
 if state= states.run{
 		if instance_exists(danger){
 			danger = instance_nearest(x,y,objBzorgorbs);
-		if distance_to_object(danger) > radius+50{
+		if distance_to_object(danger) > radius-100{
 			state=states.wander;	
 		}
 		this_angle = point_direction(danger.x,danger.y,x,y);
