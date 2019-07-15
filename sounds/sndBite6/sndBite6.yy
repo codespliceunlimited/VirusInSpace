@@ -1,5 +1,9 @@
 {
+<<<<<<< Updated upstream
     "id": "f368c4ad-e423-484f-bbe2-7272a2dae80d",
+=======
+    "id": "36957209-5a73-47c7-9b6b-06da70bfe4ea",
+>>>>>>> Stashed changes
     "modelName": "GMSound",
     "mvc": "1.0",
     "name": "sndBite6",
