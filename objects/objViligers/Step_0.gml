@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
+image_index = ((-0.06*myHealth)+6);
+
+
 #region wander
 
 var move_xinput = 0;
@@ -26,13 +30,15 @@ if state = states.wander{
 	    }
 	}
 	if instance_exists(objPlayer){
-		if distance_to_object(objPlayer) > (radius){
+		if distance_to_object(objPlayer) > (radius/2){
 			state = states.comeBack;
 		}
 	}
 	danger = collision_circle(x,y,radius,objBzorgorbs,false,true);
 	if danger {
-		state = states.run;
+		if collision_line(x,y,danger.x,danger.y,objBuilding,false,true) = noone{
+			state = states.run;
+		}
 	}
 }
 #endregion
@@ -45,10 +51,12 @@ if state= states.comeBack{
 	}
 		danger = collision_circle(x,y,radius,objBzorgorbs,false,true);
 		if danger {
-			state = states.run;
+			if collision_line(x,y,danger.x,danger.y,objBuilding,false,true) = noone{
+				state = states.run;
+			}
 		}
 		if instance_exists(objPlayer){
-			if distance_to_object(objPlayer) < (radius+50){
+			if distance_to_object(objPlayer) < (radius/3){
 				state = states.wander;
 			}
 		}
@@ -80,7 +88,9 @@ if state = states.chase{
 		}
 		danger = collision_circle(x,y,radius,objBzorgorbs,false,true);
 		if danger {
-			state = states.run;
+			if collision_line(x,y,danger.x,danger.y,objBuilding,false,true) = noone{
+				state = states.run;
+			}
 		}
 	}else{
 		state = states.wander;	

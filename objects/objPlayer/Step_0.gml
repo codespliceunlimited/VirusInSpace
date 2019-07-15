@@ -2,7 +2,7 @@
 // You can write your code in this editor
 timer ++;
 
-
+image_index = ((-0.06*myHealth)+6);
 
 
 
@@ -68,13 +68,14 @@ if gunFlow > 0 {
 
 #region Dying
 if myHealth <= 0 {
+	Dead = true;
 	var newYou = instance_create_layer(x,y,"Instances",objBzorgorbs);
 	World.follow = newYou;
 	var checkpoint = instance_nearest(x,y,objCheckpoint);
 	var checknumber = ds_list_find_index(checkPointList,checkpoint);
 	newYou.checkpoint = checknumber;
 	instance_destroy();
-	
+
 	
 }
 #endregion

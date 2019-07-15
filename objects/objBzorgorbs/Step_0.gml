@@ -16,6 +16,7 @@ if state = states.wander{
 	move_speed = 400;
 	if ds_list_size(checkPointList) > 0{
 		target = ds_list_find_value(checkPointList,checkpoint);	
+		if target = undefined exit;
 		if instance_exists(target){
 			if distance_to_object(target) < 1{
 				if ds_list_size(checkPointList) > checkpoint+1 {
@@ -50,9 +51,9 @@ if state = states.chase{
 	    move_yinput += lengthdir_y(1, this_angle);
 		}else{
 			state = states.bite;
-			biteTimer = 30;
+			biteTimer = 90;
 			with (food) {
-				myHealth -= 20;
+				myHealth -= 10;
 			}
 		}
 	}else{
