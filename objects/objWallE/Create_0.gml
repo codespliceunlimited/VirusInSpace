@@ -1,8 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-if blocking exit;
+blocking = true;
 
-if moved > 0{
-y+=1;
-moved --;
-}
+moved = sprite_width;
+image_index = 1;
+image_speed = 0;
