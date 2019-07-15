@@ -15,7 +15,7 @@ if timer <= 0 {
 		var minion = instance_create_layer(x+sprite_width/2,y+sprite_height/2,"Instances",objBzorgorbs);
 		minion.checkpoint = checknumber;
 	}
-	timer = 300;
+	timer = time;
 }
 
 timer --;
