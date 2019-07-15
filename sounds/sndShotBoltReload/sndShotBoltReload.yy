@@ -1,8 +1,8 @@
 {
-    "id": "b49a181c-8da5-4c19-8c81-c9350ab4fb76",
+    "id": "ac6e1227-d532-4680-8b13-93ea84780dd5",
     "modelName": "GMSound",
     "mvc": "1.0",
-    "name": "sndShot",
+    "name": "sndShotBoltReload",
     "audioGroupGuid": "7b2c4976-1e09-44e5-8256-c527145e03bb",
     "bitDepth": 1,
     "bitRate": 128,
