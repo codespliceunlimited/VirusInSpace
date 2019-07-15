@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-move_speed = 300;
+move_speed = 600;
 
 
 
@@ -21,6 +21,7 @@ checkpoint = 0;
 
 myHealth = 100;
 
+biteTimer = 0;
 
 
 state = states.wander;

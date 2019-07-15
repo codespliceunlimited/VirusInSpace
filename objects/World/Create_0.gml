@@ -49,5 +49,16 @@ enum states {
 	wander,
 	chase,
 	run,
-	comeBack
+	comeBack,
+	bite
 }
+
+#region Camera
+camera = view_camera[0];
+follow = objPlayer;
+view_W_half = camera_get_view_width(camera)*0.5;
+view_H_half = camera_get_view_height(camera)*0.5;
+xTo = xstart;
+yTo = ystart;
+viewBuffer = 80;
+#endregion

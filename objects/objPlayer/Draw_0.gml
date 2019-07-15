@@ -9,5 +9,5 @@ if mouse_x < x {
 }else{
 	var flip = 1;	
 }
-
+draw_healthbar(x-sprite_width,y-sprite_height,x+sprite_width,y-sprite_width-3,myHealth,c_black,c_green,c_green,0,true,true);
 draw_sprite_ext(ITEMINFO[myGun,iteminfo.sprite],0,x,y,1,flip,dir,c_white,1);
