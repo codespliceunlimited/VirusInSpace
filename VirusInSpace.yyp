@@ -1287,14 +1287,6 @@
             }
         },
         {
-            "Key": "d943ab6a-e9fb-47ef-9f82-3480824ef9c1",
-            "Value": {
-                "id": "0fea3149-7d30-4a78-8d16-a39a008eb127",
-                "resourcePath": "objects\\objBite\\objBite.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "d96f0912-9d1c-41a6-a1f9-4bba7791b695",
             "Value": {
                 "id": "e000f2d0-35d3-4fd1-8ee1-ab979e6a21ce",
