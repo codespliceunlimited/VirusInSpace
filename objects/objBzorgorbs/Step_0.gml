@@ -16,6 +16,7 @@ if state = states.wander{
 	move_speed = 400;
 	if ds_list_size(checkPointList) > 0{
 		target = ds_list_find_value(checkPointList,checkpoint);	
+		if target = undefined exit;
 		if instance_exists(target){
 			if distance_to_object(target) < 1{
 				if ds_list_size(checkPointList) > checkpoint+1 {
