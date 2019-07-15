@@ -19,7 +19,6 @@
         "ac243bac-c5dc-4686-ae11-4f01d2c6be1d",
         "9b57fe22-9834-4500-8061-0216a9a41fa6",
         "bdfef86d-dc7d-440b-8c56-694dc869d25f",
-<<<<<<< Updated upstream
         "34825370-2a27-43e6-938f-094fa496e40c",
         "6da1543a-bc5e-4733-a836-772cc1964e79",
         "7976dd01-b929-40e3-9472-c071e10f0b46",
@@ -38,26 +37,6 @@
         "b4860b80-ee1b-4510-b102-97f0d09cc8c6",
         "bd30034f-eb5b-4359-870f-5371f63915c0",
         "f5428309-e486-44de-af34-1f3c882825b2"
-=======
-        "344fc3cd-2267-49de-8ea4-048990a3bf2a",
-        "ff65632c-6626-4016-880d-8442d9b68383",
-        "be889510-3c14-445b-9d9d-0269b130e841",
-        "db15be68-d36d-4ea3-b6ff-eb4b9776400e",
-        "79bb0a22-f6eb-4892-9da1-6150f72d5195",
-        "ba4b297a-66b7-4268-b93a-3f52ef6868e4",
-        "53e808fa-91fe-4dbc-bbf1-abe66c03bacb",
-        "fa0e8296-89a1-49cf-91e6-748cbdaf4a1a",
-        "bb5c58e2-156f-4631-9bb3-f0a061d73219",
-        "cd3c1859-8e5a-4f3f-a5cf-c044983bfee3",
-        "37a2ee42-26e5-4585-b7b2-9d3b9866f4d6",
-        "810d3038-2281-472a-bddd-3a5d56f57414",
-        "36957209-5a73-47c7-9b6b-06da70bfe4ea",
-        "5b27cabe-ea7c-47ec-a03f-53155e9749ff",
-        "99d51814-63ae-433d-9778-1f41d4b03a20",
-        "71c3bb8f-d74a-40e5-aba1-ec4b929bdd53",
-        "34351cba-1880-4e29-b338-e0eceb822e8e",
-        "ee7c68d1-ca44-4746-9355-04db9ab622cb"
->>>>>>> Stashed changes
     ],
     "filterType": "GMSound",
     "folderName": "sounds",
