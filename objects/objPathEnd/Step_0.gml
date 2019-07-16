@@ -6,14 +6,14 @@ if !finished{
 	
 	with (objWallE){
 		if moveBack >0{
-			moveBack --;
-			x -=1;
+			moveBack -=0.5;
+			x -= 0.5;
 		}
 	}
 	with (objWallW){
 		if moveBack >0{
-			moveBack --;
-			x +=1;
+			moveBack -= 0.5;
+			x += 0.5;
 		}
 	}
 }

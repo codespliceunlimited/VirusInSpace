@@ -4,10 +4,12 @@
 
 
 
-
+draw_set_font(fnt_large);
 
 if Dead {
 	draw_sprite(sprDeath,0,view_W_half,view_H_half);
+	
+	draw_text(view_W_half,view_H_half+300,"Press R to Restart");
 	
 }
 
@@ -15,7 +17,9 @@ if finished {
 	Points = 0;
 	var number = ds_list_size(scoreboardList)
 	Points = (number*550)+(50000-totalTime)
-	draw_text(view_W_half,view_H_half, Points);
+	var showME = "Points: " + string(Points);
+	draw_text(view_W_half,view_H_half, showME);
+	draw_text(view_W_half,view_H_half+300,"Press R to Restart");
 }
 
 

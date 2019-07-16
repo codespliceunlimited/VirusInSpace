@@ -14,6 +14,7 @@ if keyboard_check_pressed(ord("E")){
 	}
 }
 
+
 #region Movement
 
 seconds_passed = delta_time/1000000;
@@ -53,7 +54,7 @@ if timer % 10 = 0 {
 		var E = instance_create_layer(gun.x,gun.y,"Interactions",o_damagetext);
 		E.mytext = "E";
 	}
-	spawner = collision_circle_list(x,y,radius*2,objSpawner,false,true,spawnerList,false);
+	spawner = collision_circle_list(x,y,radius*3,objSpawner,false,true,spawnerList,false);
 	if spawner > 0{
 		for (var i=0; i< spawner; i++){
 			thisSpawner = spawnerList[|i];
