@@ -1,8 +1,12 @@
 {
-    "id": "8f0b2eb4-8f03-44a4-b447-42cd1458071c",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "ease_in_bounce",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Easing",
+    "path": "folders/Scripts/Easing.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "ease_in_bounce",
+  "tags": [],
+  "resourceType": "GMScript",
 }

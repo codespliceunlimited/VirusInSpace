@@ -1,8 +1,12 @@
 {
-    "id": "f1616aec-9be9-4163-99cf-446cf4d02d1d",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "_scr_sn_grad4",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Noise",
+    "path": "folders/Scripts/Noise.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "_scr_sn_grad4",
+  "tags": [],
+  "resourceType": "GMScript",
 }

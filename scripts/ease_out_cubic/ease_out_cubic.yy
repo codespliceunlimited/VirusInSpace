@@ -1,8 +1,12 @@
 {
-    "id": "5674b01e-efad-465e-abb4-3e739a09f9ba",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "ease_out_cubic",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Easing",
+    "path": "folders/Scripts/Easing.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "ease_out_cubic",
+  "tags": [],
+  "resourceType": "GMScript",
 }

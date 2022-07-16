@@ -1,5 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+if instance_exists(World){
+	if paused exit;
+}
+
+
 #region Dying
 if myHealth <= 0 {
 	instance_destroy();
@@ -12,16 +18,32 @@ if myHealth <= 0 {
 var move_xinput = 0;
 var move_yinput = 0;
 
+stale --
+
 if state = states.check{
-		if ds_list_size(checkPointList) > 0{
+	var listSize = ds_list_size(checkPointList)
+		if stale <= 0{
+			if listSize > checkpoint{
+				checkpoint++;
+				stale = 250;
+			}else{
+				state = states.wander;	
+				stale = 800;
+			}
+			
+		}
+		if listSize > 0{
 		target = ds_list_find_value(checkPointList,checkpoint);	
 		if target != undefined {
 		if instance_exists(target){
-			if distance_to_object(target) < 1{
+			if distance_to_object(target) < 20{
+				stale = 800;
 				if ds_list_size(checkPointList) > checkpoint+1 {
 					checkpoint++;	
+					
 				}else{
 					state = states.wander;	
+					stale = 800;
 				}
 			}
 		}
@@ -40,7 +62,6 @@ if state = states.check{
 }
 
 if state = states.wander{
-	move_speed = 400;
 		change --;
 	if change <= 0 {
 		change = irandom_range(5,60);
@@ -66,13 +87,18 @@ if state = states.wander{
 			state = states.chase;
 		}
 	}
+	
+	if stale <= 0{
+		state = states.check;
+		checkpoint -= 2
+	}
 }
 #endregion
 
 
 if state = states.chase{
+	stale = 800
 	if instance_exists(food){
-		move_speed = 600;
 		if distance_to_object(food) > 1{
 			newFood = instance_nearest(x,y,objFood);
 			if collision_line(x,y,newFood.x,newFood.y,objBuilding,false,true) = noone{
@@ -81,8 +107,9 @@ if state = states.chase{
 				
 		
 		this_angle = point_direction(x,y,food.x,food.y);
-		move_xinput += lengthdir_x(1, this_angle);
-	    move_yinput += lengthdir_y(1, this_angle);
+		var rand = random_range(-5,5)
+		move_xinput += lengthdir_x(1, this_angle+rand);
+	    move_yinput += lengthdir_y(1, this_angle+rand);
 		}else{
 			state = states.bite;
 			biteTimer = 90;
@@ -118,7 +145,7 @@ if state = states.bite {
 
 var moving = ( point_distance(0,0,move_xinput,move_yinput) > 0 );
 if moving  {
-	var move_speed_this_frame = move_speed*seconds_passed;
+	var move_speed_this_frame = move_speed;
 	var move_dir = point_direction(0,0,move_xinput,move_yinput);
 	var spd = move_speed_this_frame;
 	var dir = move_dir;
@@ -126,7 +153,7 @@ if moving  {
 	var xtarg = clamp(x+lengthdir_x(spd,dir),0,room_width);
 	var ytarg = clamp(y+lengthdir_y(spd,dir),0,room_height);
 
-	if place_free(xtarg,ytarg) {
+	if !place_meeting(xtarg,ytarg,objWall) {
 	    x = xtarg;
 	    y = ytarg;
 	}else {
@@ -137,7 +164,7 @@ if moving  {
 	            var angle_to_check = dir+angle*multiplier;
 	            xtarg = x+lengthdir_x(spd, angle_to_check);
 	            ytarg = y+lengthdir_y(spd, angle_to_check);     
-	            if place_free(xtarg,ytarg) {
+	            if !place_meeting(xtarg,ytarg,objWall) {
 	                x = xtarg;
 	                y = ytarg;  
 	                exit;       

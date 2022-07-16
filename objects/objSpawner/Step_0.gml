@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if instance_exists(World){
+	if paused exit;
+}
+
 if !active exit;
 
 if checknumber = 0 {

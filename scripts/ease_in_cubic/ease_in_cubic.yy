@@ -1,8 +1,12 @@
 {
-    "id": "85029744-3226-40ea-a0e9-8f5691070bdf",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "ease_in_cubic",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Easing",
+    "path": "folders/Scripts/Easing.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "ease_in_cubic",
+  "tags": [],
+  "resourceType": "GMScript",
 }

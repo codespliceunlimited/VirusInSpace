@@ -1,5 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+if instance_exists(World){
+	if paused exit;
+}
+
 
 
 image_index = ((-0.06*myHealth)+6);
@@ -34,9 +38,9 @@ if state = states.wander{
 			state = states.comeBack;
 		}
 	}
-	danger = collision_circle(x,y,radius,objBzorgorbs,false,true);
+	danger = collision_circle(x,y,radius,objBzorgorbs,true,true);
 	if danger {
-		if collision_line(x,y,danger.x,danger.y,objBuilding,false,true) = noone{
+		if collision_line(x,y,danger.x,danger.y,objBuilding,true,true) = noone{
 			state = states.run;
 		}
 	}
@@ -49,9 +53,9 @@ if state= states.comeBack{
 		move_xinput += lengthdir_x(1, this_angle);
 	    move_yinput += lengthdir_y(1, this_angle);
 	}
-		danger = collision_circle(x,y,radius,objBzorgorbs,false,true);
+		danger = collision_circle(x,y,radius,objBzorgorbs,true,true);
 		if danger {
-			if collision_line(x,y,danger.x,danger.y,objBuilding,false,true) = noone{
+			if collision_line(x,y,danger.x,danger.y,objBuilding,true,true) = noone{
 				state = states.run;
 			}
 		}
@@ -65,7 +69,7 @@ if state= states.comeBack{
 #region  Run
 if state= states.run{
 		if instance_exists(danger){
-			danger = instance_nearest(x,y,objBzorgorbs);
+			//danger = instance_nearest(x,y,objBzorgorbs);
 		if distance_to_object(danger) > radius-100{
 			state=states.wander;	
 		}
@@ -86,9 +90,9 @@ if state = states.chase{
 			move_xinput += lengthdir_x(1, this_angle);
 		    move_yinput += lengthdir_y(1, this_angle);
 		}
-		danger = collision_circle(x,y,radius,objBzorgorbs,false,true);
+		danger = collision_circle(x,y,radius,objBzorgorbs,true,true);
 		if danger {
-			if collision_line(x,y,danger.x,danger.y,objBuilding,false,true) = noone{
+			if collision_line(x,y,danger.x,danger.y,objBuilding,true,true) = noone{
 				state = states.run;
 			}
 		}
@@ -101,7 +105,7 @@ if state = states.chase{
 #region Move
 var moving = ( point_distance(0,0,move_xinput,move_yinput) > 0 );
 if moving  {
-	var move_speed_this_frame = move_speed*seconds_passed;
+	var move_speed_this_frame = move_speed;
 	var move_dir = point_direction(0,0,move_xinput,move_yinput);
 	var spd = move_speed_this_frame;
 	var dir = move_dir;
@@ -109,7 +113,7 @@ if moving  {
 	var xtarg = clamp(x+lengthdir_x(spd,dir),0,room_width);
 	var ytarg = clamp(y+lengthdir_y(spd,dir),0,room_height);
 
-	if place_free(xtarg,ytarg) {
+	if !place_meeting(xtarg,ytarg,objWall) {
 	    x = xtarg;
 	    y = ytarg;
 	}else {
@@ -120,7 +124,7 @@ if moving  {
 	            var angle_to_check = dir+angle*multiplier;
 	            xtarg = x+lengthdir_x(spd, angle_to_check);
 	            ytarg = y+lengthdir_y(spd, angle_to_check);     
-	            if place_free(xtarg,ytarg) {
+	            if !place_meeting(xtarg,ytarg,objWall) {
 	                x = xtarg;
 	                y = ytarg;  
 	                exit;       
@@ -134,6 +138,9 @@ if moving  {
 
 #region Dying
 if myHealth <= 0 {
+	with(objGoodGuys){
+		danger = noone;
+	}
 	instance_destroy();
 	var newYou = instance_create_layer(x,y,"Instances",objBzorgorbs);
 	var checkpoint = instance_nearest(x,y,objCheckpoint);

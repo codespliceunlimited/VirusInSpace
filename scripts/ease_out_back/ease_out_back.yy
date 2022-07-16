@@ -1,8 +1,12 @@
 {
-    "id": "90c9ddcb-6a49-4ea4-8802-e469a14037d3",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "ease_out_back",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Easing",
+    "path": "folders/Scripts/Easing.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "ease_out_back",
+  "tags": [],
+  "resourceType": "GMScript",
 }

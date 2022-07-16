@@ -1,8 +1,12 @@
 {
-    "id": "bf798357-9201-496c-8332-891a70682c75",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "_sn_noise2d",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Noise",
+    "path": "folders/Scripts/Noise.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "_sn_noise2d",
+  "tags": [],
+  "resourceType": "GMScript",
 }

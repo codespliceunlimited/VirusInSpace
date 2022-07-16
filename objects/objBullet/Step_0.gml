@@ -2,9 +2,11 @@
 
 lifeSpan --;
 
+
 if lifeSpan <= 0 {
 	instance_destroy();	
 }
+
 
 
 if bulletSpeed <= 0  exit;
@@ -17,7 +19,17 @@ damage = bulletSpeed*dmg;
 
 badie = collision_point(x,y,objBzorgorbs,false,true);
 if badie{
-	if badie != target{
+		with (badie){
+			myHealth -= other.damage;
+			var text = instance_create_layer(x+irandom_range(-20,20),y-50,"Bullets",o_damagetext);
+			text.mytext = round(other.damage);
+		}
+	instance_destroy();
+
+}
+/*
+if badie{
+	if badie != shot{
 		with (badie){
 			myHealth -= other.damage;
 			var text = instance_create_layer(x+irandom_range(-20,20),y-50,"Bullets",o_damagetext);
@@ -26,13 +38,13 @@ if badie{
 		bulletSpeed -= 2;
 		if bulletSpeed <= 0 bulletSpeed = 0;
 	}
-	target = badie;
+	shot = badie;
 }
 
 
 
 
-
+*/
 
 
 
@@ -44,7 +56,7 @@ var spd = bulletSpeed;
 var xtarg = x+lengthdir_x(spd,dir);
 var ytarg = y+lengthdir_y(spd,dir);
 
-if place_free(xtarg,ytarg) {
+if !place_meeting(xtarg,ytarg,objWall) {
     x = xtarg;
     y = ytarg;
 
@@ -56,7 +68,7 @@ if place_free(xtarg,ytarg) {
             xtarg = x+lengthdir_x(spd, angle_to_check);
             ytarg = y+lengthdir_y(spd, angle_to_check); 
 			bulletSpeed -= 0.2;
-            if place_free(xtarg,ytarg) {
+            if !place_meeting(xtarg,ytarg,objWall) {
                 x = xtarg;
                 y = ytarg;  
 				dir = angle_to_check

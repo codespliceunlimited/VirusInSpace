@@ -2,6 +2,7 @@
 switch (room)
 {
 case Lobby:
+font_set(fnt_title_main,fa_center,fa_left)
 	draw_set_font(fnt_title_main);
 	draw_set_halign(fa_center);
     var c = c_yellow;

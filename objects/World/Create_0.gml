@@ -1,16 +1,52 @@
 /// @description Insert description here
 // You can write your code in this editor
 // world Details
+numbPlayers = 4;
+
+globalvar BlueColor, DarkerRed,pingColor,YellowColor,GreyColor, newsFeed, ITEMINFO, enemyTotal, seconds_passed,
+checkPointList, Dead, finished, Points, cash,totalTime, scoreboardList, paused
+;
 
 screenWidthPosition = room_width / 32;
 screenH = room_height/32;
 
+rollback_define_player(objPlayer)
+
+rollback_define_input({
+left: ord("A"),
+right: ord("D"),
+up: ord("W"),
+down: ord("S"),
+fire: mb_left,
+grab: ord("E"),
+m_x: m_axisx,
+m_y: m_axisy
+
+})
+
+rollback_define_mock_input(1, {
+    fire: vk_control,
+    grab: vk_shift,
+    left: ord("J"),
+    right: ord("L")
+});
 
 
-globalvar BlueColor, DarkerRed,pingColor,YellowColor,GreyColor, newsFeed, ITEMINFO, enemyTotal, seconds_passed,
-checkPointList, Dead, finished, Points, cash,totalTime, scoreboardList
-;
+if (!rollback_join_game())
+{
+	switch (os_type){
+		case os_windows:
+			rollback_create_game(numbPlayers,true);
+		break;
+		
+		case os_operagx:
+			rollback_create_game(numbPlayers,false);
+		break;
+		
+	}
+}
 
+paused = true;
 
 // Color Theme
 BlueColor = make_color_rgb(98,157,196);
@@ -40,7 +76,7 @@ Points = 0;
 
 // init 
 InitItems();
-scr_sn_init();
+
 
 //enemy
 
@@ -57,12 +93,11 @@ enum states {
 
 Dead = false;
 
+instance_create_layer(x,y,"Instances", objCamera)
+
 #region Camera
 camera = view_camera[0];
-follow = objPlayer;
 view_W_half = camera_get_view_width(camera)*0.5;
 view_H_half = camera_get_view_height(camera)*0.5;
-xTo = xstart;
-yTo = ystart;
 viewBuffer = 80;
 #endregion

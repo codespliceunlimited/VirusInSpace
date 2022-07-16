@@ -1,8 +1,12 @@
 {
-    "id": "08dd4565-c431-4c32-a86d-e8f63dcf1c13",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "ease_linear",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Easing",
+    "path": "folders/Scripts/Easing.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "ease_linear",
+  "tags": [],
+  "resourceType": "GMScript",
 }

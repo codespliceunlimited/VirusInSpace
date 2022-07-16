@@ -1,8 +1,12 @@
 {
-    "id": "735d7eb1-3d47-40d5-92fd-075deeb76b06",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "ease_out_quad",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Easing",
+    "path": "folders/Scripts/Easing.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "ease_out_quad",
+  "tags": [],
+  "resourceType": "GMScript",
 }

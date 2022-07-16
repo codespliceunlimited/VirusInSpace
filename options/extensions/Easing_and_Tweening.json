@@ -1,0 +1,9 @@
+{
+  "extensionId": {
+    "name": "Easing_and_Tweening",
+    "path": "extensions/Easing_and_Tweening/Easing_and_Tweening.yy"
+  },
+  "resourceVersion": "1.0",
+  "resourceType": "GMExtensionConfigSet",
+  "configurables": null
+}
